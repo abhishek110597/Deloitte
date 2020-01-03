@@ -10,7 +10,7 @@ public class LaunchCustomerApplication {
 		System.out.println("#### Welcome to Customer App ###");
 		System.out.println("#### 1.Add Customer ###");
 		System.out.println("#### 2.Update Customer ####");
-		System.out.println("#### Welcome to Customer App ###");
+		System.out.println("#### 3.Delete Customer ###");
 		System.out.println("#### Welcome to Customer App ###");
 		System.out.println("#### 6.EXIT ###");
 		Scanner sc = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class LaunchCustomerApplication {
 			boolean result = impl.updateCustomer(customer);
 			System.out.println(result);
 		} else if (choice == 3) {
-
+			System.out.println("Enter the customerId to be deleted");
 		} else if (choice == 4) {
 
 		} else if (choice == 5) {

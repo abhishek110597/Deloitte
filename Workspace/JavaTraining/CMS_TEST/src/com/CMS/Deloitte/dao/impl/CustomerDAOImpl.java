@@ -13,6 +13,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	private static final String INSERT_CUSTOMER_QUERY = "insert into hr.customer values(?,?,?,?)";
 	private static final String UPDATE_CUSTOMER_QUERY = "update hr.customer set customerName=?,customerAddr=?,billAmount=? where customerId=?";
+	private static final String DELETE_CUSTOMER_QUERY = "delete from hr.customer where customerId=?";
 	int result = 0;
 
 	@Override
@@ -59,7 +60,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public boolean deleteCustomer(int customerId) {
-		return false;
+		Connection conn=DBCOnnection.makeConnetion();
+		
+		try {
+		PreparedStatement stat=conn.PreparedStatement(DELETE_CUSTOMER_QUERY);
+		stat.setInt(1, customer.getCustomerId());
+		result=stat.executeUpdate();
+		
+		return result ==0 ? false : true;
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	@Override
