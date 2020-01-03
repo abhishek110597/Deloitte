@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login form</title>
+<script type="text/javascript">
+function validate(){
+	//alert("HI")
+	var uname=document.getElementById("username").value
+	var pass=document.getElementById("password").value
+	var cpass=document.getElementById("cpassword").value
+	if(uname==0)
+		{
+		alert("Please enter a name")
+		}
+	else if(pass==0&&pass<6)
+	{
+	alert("Enter the valid password with aleast 6 characters")
+	}
+	else if(cpass!=pass){
+		alert("Passwords do not match")
+	}
+	else{
+		alert("Welcome "+uname)
+	}
+}
+</script>
+</head>
+<body>
+<form>
+<h2>Login form</h2>
+<table cellspacing="10" cellpadding="10" border="0" align="center">
+<caption>Login Form</caption>
+<tr>
+<td>User Name:</td><td><input type="text" name="username" id="username"/></td>
+</tr>
+<tr>
+<td>Password:</td><td><input type="password" name="password" id="password"/></td>
+</tr>
+<tr>
+<td>Confirm Password:</td><td><input type="password" name="cpassword" id="cpassword"/></td>
+</tr>
+<tr>
+<td><input type="submit" value="Submit" id="submit"/></td>
+<td><input type="button" value="Go" onclick="validate()"/></td>
+<td><input type="reset"  id="reset"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

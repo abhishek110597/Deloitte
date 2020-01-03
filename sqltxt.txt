@@ -1,0 +1,143 @@
+CREATE TABLE CUSTOMER
+
+(
+
+CUSTOMERID INTEGER,
+
+CUSTOMERNAME VARCHAR2(20),
+
+CUSTOMERADDR VARCHAR2(20),
+
+BILLAMOUNT INTEGER
+
+)
+
+
+
+
+
+insert into customer values(101,'jay','pune',34324);
+
+insert into customer values(102,'yash','Blr',34324);
+
+insert into customer values(103,'tarun','Blr',34324);
+
+insert into customer values(104,'kalpana','Mumb',34324);
+
+insert into customer values(105,'shek','pune',34324);
+
+
+
+
+
+select distinct(customeraddr) from customer;
+
+select  customername , billamount , billamount*10 as newbill from customer;
+
+select 'Mr/Ms' || customername from customer;
+
+
+
+select * from customer where billamount < 5000;
+
+select * from customer where customeraddr ="pune" and billamount <5000;
+
+
+
+
+
+
+create table employee(
+employeeId interger not null,
+employeeName varchar(20) not null,
+employeeAddress varchar2(20),
+salary interger not null
+)
+
+
+create table Student_f
+ (
+    Roll varchar(10),
+    Name varchar(20),
+    Address varchar(20),
+    Marks number
+)
+
+insert into Student_F values('1','Tufail','Chennai',null);
+insert into Student_F values('2','Amit','Chennai',null);
+
+
+select trim('H' from 'HelloWorld') from dual
+
+
+select lpad(Name,10,'#') from Student_f
+
+create table emp(
+eid integer,
+ename varchar(20),
+dob date,
+doj date
+)
+
+INSERT INTO EMP VALUES(101,'Abhi','05-11-1997','01-20-2020')
+
+
+INSERT INTO EMP VALUES(102,'Sourav','12-01-1998','01-20-2020')
+
+
+INSERT INTO EMP VALUES(420,'Vinay','05-13-1998','08-20-2020')
+
+
+INSERT INTO EMP VALUES(103,'Bhat','03-06-1997','6-20-2020')
+
+
+INSERT INTO EMP VALUES(104,'Yamini','01-01-1997','07-11-2019')
+
+select * from emp
+
+select trunc((sysdate-dob)/365) as Age FROM emp where ename='Yamini';
+
+select trunc((doj-dob)/365) as Age_when_joining FROM emp;
+
+select trunc((sysdate-dob)/365) as Age,trunc((doj-dob)/365) as Age_when_joining FROM emp where ename='Yamini';
+
+select ename,trunc(months_between(doj,dob)/12) as Age_when_joining FROM emp;
+
+create table Doctor(
+
+docId integer primary key,
+
+docName varchar(200),
+
+
+dob date,
+
+
+doj date
+
+)
+
+
+insert into Doctor values(190,'Ashwathy',to_date('2003/05/03 21:02:44','yyyy/mm/dd hh24:mi:ss'),to_date('2016/04/05 09:02:44','yyyy,mm,dd hh24:mi:ss'))
+
+
+
+select coalesce(to_number(roll),(marks),10) from student_f
+
+select * from student_f
+
+create table customer100(
+cId integer primary key,
+cName varchar2(20) not null,
+cAddress varchar2(20) check (cAddress in('Delhi','Mumbai','Bangalore')),
+billAmount integer check (billAmount>0)
+)
+
+insert into customer100 values (101,'Sourav','Bangalore',5000)
+
+
+insert into customer100 values (102,'Abhishek','Bangalore',500)
+
+
+insert into customer100 values (103,'Tufail','Delhi',45000)
+

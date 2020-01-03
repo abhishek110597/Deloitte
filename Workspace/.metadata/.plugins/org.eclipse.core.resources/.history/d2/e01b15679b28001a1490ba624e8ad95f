@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>.
+<head color="Green">
+<meta charset="ISO-8859-1">
+<title>Deloitte</title>
+</head>
+<hr color="Green" size="10"/>
+<body bgcolor="Sky blue">
+<h1 >Welcome to Deloitte </h1>
+<div>
+<a href="about.html">About US</a>
+<a href="#Profile"></a>
+<br/>
+<a href="#Current"></a>
+<br/>
+<a href="#Status"></a>
+<a name="profile"></a>
+PROFILE DETAILS
+
+<div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;exceptionDemos.NewYearParty&apos; to &apos;Age_Checker&apos;&#x0D;&#x0A;- Original project: &apos;SecondProject&apos;&#x0D;&#x0A;- Original element: &apos;exceptionDemos.NewYearParty&apos;&#x0D;&#x0A;- Renamed element: &apos;exceptionDemos.Age_Checker&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;NewYearParty&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;exceptionDemos{NewYearParty.java[NewYearParty" matchStrategy="1" name="Age_Checker" qualified="false" references="true" similarDeclarations="false" stamp="1577783409980" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Date</title>
+<script type="text/javascript">
+var today=new Date();
+var lastdate=new Date(2020,0,15);
+
+bill=prompt("Enter bill amount")
+var day=1000*60*60*24;
+x=(lastday-today)/day
+if(x>0)
+	{
+	bill=bill+(x*50)
+	document.write("Bill="+bill)
+	}
+else
+	document.write("Bill="+bill)
+</script>
+</head>
+<body>
+
+</body>
+</html>

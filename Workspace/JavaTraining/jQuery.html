@@ -1,0 +1,42 @@
+<html>
+
+    <head>jQuery</head>
+    <script src="jQuery.js"></script>
+    <script type="text/javascript">
+    $(document).ready (function(){
+        $("#b1").click(function(){
+            $("div").hide();
+        })
+        $("#b2").click(function(){
+            $("p").hide();
+        })
+        $("#b3").click(function(){
+            $("h1").hide();
+        })
+        $("#b4").click(function(){
+            $("div").show();
+        })
+        $("#b5").click(function(){
+            $("p").show();
+        })
+        $("#b6").click(function(){
+            $("h1").show();
+        })
+    })
+    </script>
+
+<body>
+
+<div>Div stuff</div>
+<p>paragragh stuff</p>
+<h1>Header stuff</h1>
+<button id="b1">Div Remove</button>
+<button id="b2">Para Remove</button>
+<button id="b3">Header Remove</button>
+<br/>
+<button id="b4">showDiv</button>
+<button id="b5">showPara</button>
+<button id="b6">showPara</button>
+</body>
+</html>
+

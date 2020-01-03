@@ -1,0 +1,5 @@
+In the web page that you created for a software company, apply different styles using CSS based on following.
+All the links should be underlined and with a blue color.
+All the headings should be in bold, uppercase, center aligned, red color and unique font from the text.
+All the labels in the form should be in times of roman and italics.
+Choose an appropriate color for the entire background for the web page.

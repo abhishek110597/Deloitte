@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login form</title>
+</head>
+<body>
+<form>
+<h2>Login form</h2>
+<table cellspacing="10" cellpadding="10" border="0" align="center">
+<caption>Login Form</caption>
+<tr>
+<td>User Name:<input type="text" name="username" id="username"/></td>
+</tr>
+<tr>
+<td>User Name:<input type="password" name="password" id="password"/></td>
+</tr>
+tr>
+<td><input type="submit" id="submit"/></td>
+<td><input type="reset"  id="reset"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

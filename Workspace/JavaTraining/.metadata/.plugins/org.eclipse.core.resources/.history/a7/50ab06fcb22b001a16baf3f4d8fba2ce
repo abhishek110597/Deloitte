@@ -1,0 +1,10 @@
+package exceptionDemos;
+
+public class Source {
+	public static void main(String[] args) {
+		Product p=new Product(1,"Chair",5,1500);
+		System.out.println(p);
+		p.setQoh(3);
+		System.out.println(p);
+	}
+}

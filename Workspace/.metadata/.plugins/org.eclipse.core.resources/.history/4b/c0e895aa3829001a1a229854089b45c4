@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient login form</title>
+</head>
+<body>
+	<form>
+		<h2>Patient login form</h2>
+		<table cellspacing="10" cellpadding="10" border="0" align="center">
+			<caption>Patient Form</caption>
+			<tr>
+			<tr>
+				<td>Patient Name:</td>
+				<td><input type="text" name="patientName" id="patientName" /></td>
+			</tr>
+			<tr>
+				<td>Patient Address:</td>
+				<td><textarea name="patientAddress" id="patientAddress" row="5"
+						column="15">
+					</textarea></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td><input type="radio" value="Male" name="gender" id="male" />Male
+					<input type="radio" value="Female" name="gender" id="female" />Female
+					<input type="radio" value="Other" name="gender" id="other" />Other</td>
+			</tr>
+			<tr>
+				<td>Blood Group:</td>
+				<td><input type="radio" value="A+" name="BG" id="bg1" />A+ <input
+					type="radio" value="B+" name="BG" id="bg2" />B+ <input
+					type="radio" value="O+" name="BG" id="bg3" />O+</td>
+			</tr>
+			<tr>
+				<td>Notification:</td>
+				<td><input type="checkbox" value="byMobile" name="notification"
+					id="mobile" />By Mobile <input type="checkbox" value="byEmail"
+					name="notification" id="email" />By Email <input type="checkbox"
+					value="byWhatsapp" name="notification" id="notification" />By
+					WhatsApp</td>
+			</tr>
+			<tr>
+				<td>
+				<select name ="dept" id="dept">
+					<option>cardio</option>
+					<option>dermo</option>
+					<option>pyscho</option>
+					<option>dental</option>
+				</select>
+				
+				<select>
+				<option "Cardiology" name="department"id="department"> 
+				<option "Dermatology" value="byEmail"
+					name="notification" id="email" />By Email <input type="checkbox"
+					value="byWhatsapp" name="notification" id="notification" />By
+					WhatsApp</td>
+
+				</td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" value="Admit"
+					id="submit" /></td>
+				<td align="center"><input type="reset" value="Clear" id="reset" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+

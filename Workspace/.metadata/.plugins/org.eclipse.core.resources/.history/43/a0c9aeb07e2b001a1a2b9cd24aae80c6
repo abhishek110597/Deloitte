@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>FORM</title>
+    <script>
+        function validate(){
+            with(document.forms[0]){
+                document.getElementById('setName').innerHTML = userName.value;
+                document.getElementById('setGender').innerHTML = gender.value;
+                document.getElementById('setComment').innerHTML = "People "+like.value+"You!";
+            }
+            return false
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return validate()">
+        <h2>DETAILS</h2>
+        <table bgcolor="#FFC0CB" cellspacing="10" cellpadding="10" border="10" align="center">
+
+            <tr>
+                <td>User Name:</td>
+                <td><input type="text" name="userName" id="userName" /></td>
+            </tr>
+            <tr>
+                <td>Spouse Name:</td>
+                <td><input type="text" name="spouseName" id="spouseName" /></td>
+            </tr>
+                <tr>
+                <td>Gender:</td>
+                <td>
+                    <div><input type="radio" name="gender" value="Male" id="male" checked />Male</div>
+                    <div><input type="radio" name="gender" value="Female" id="female" />Female</div>
+                </td>
+            <tr>
+
+            <tr>
+                <td>Comments:</td>
+                <td>
+                    <div><input type="radio" name="like" value="like" id="like" checked />Like</div>
+                    <div><input type="radio" name="like" value="dont_like" id="dlike"/>Don't Like</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Submit" id="submit" /></td>
+            </tr>
+            <tr>
+                <td>Name :</td><td id=setName>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Your gender is :</td><td id=setGender>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Comment :</td><td id=setComment>
+
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+</body>
+
+</html>

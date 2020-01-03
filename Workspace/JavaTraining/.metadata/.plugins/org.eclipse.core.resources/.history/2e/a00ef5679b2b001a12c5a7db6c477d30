@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Demo {
+	int num1, num2,result;
+	String name;
+	Scanner sc=new Scanner(System.in);
+	void display() {
+		result=num1/num2;
+		System.out.println("Result = "+result);
+	}
+	}

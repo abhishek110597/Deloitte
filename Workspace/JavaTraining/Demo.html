@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Disable cut copy paste
+            $('body').on('cut copy paste', function (e) 
+	    {
+                alert("Very smart, you can't cut copy paste")
+                e.preventDefault();
+            });
+            //Disable mouse right click
+            $("body").bind("contextmenu", function (e) {
+                alert("Very smart, You can't right click")
+                return false;
+            });
+            //$('body').css("user-select","none");  
+            $("body").mousedown(function(e) {
+                e.preventDefault();
+                alert("Cannot select")
+            })    
+        });
+    </script>
+</head>
+
+<body>
+    <p>Click me</p>
+</body>
+
+</html>

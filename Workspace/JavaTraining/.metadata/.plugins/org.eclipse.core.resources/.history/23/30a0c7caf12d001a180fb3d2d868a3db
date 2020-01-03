@@ -1,0 +1,19 @@
+package jdbcDemos;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class InsertTableDemo {
+	public static void main(String[] args) {
+
+		Connection conn1 = DBConnection.makeConnection();
+		try {
+			Statement stat=conn1.createStatement();
+			String insertQuery="insert into hr.customer values(1877,'Bibhu','Bhub',50000)";
+			int rowsAffected=stat.executeUpdate(insertQuery);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

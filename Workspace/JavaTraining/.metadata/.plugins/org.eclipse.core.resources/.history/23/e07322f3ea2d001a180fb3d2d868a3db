@@ -1,0 +1,32 @@
+package jdbcDemos;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DBConnection {
+ public static Connection makeConnection() {
+	 
+	 Connection conn=null;
+	 try {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		System.out.println("Driver Loaded");
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+		
+		try {
+			conn= DriverManager.getConnection("jdbc:oracle:thin:hr/hr@localhost:1521:XE","system","admin");
+			System.out.println("Connected");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return conn;
+		
+ }
+}

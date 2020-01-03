@@ -1,0 +1,35 @@
+p{
+    background-color:beige;
+    text-align: center;
+    font-family : monospace;
+    font-size : 20px;
+    }
+    
+    p.bowlers{
+        background-color: red;
+        text-align: center;
+        font-family : monospace;
+        font-size : 20px;
+        }
+    
+        p.batsman{
+            background-color:blue;
+            }
+    h1{
+    background-color:aqua ;
+    }
+    A:link{
+        color: darkmagenta;
+    }
+    
+    A:visited{
+        color: darkolivegreen;
+    }
+    
+    A:hover{
+        color: darkturquoise;
+    }
+    
+    /*body{
+    background : url("product.jpg") 
+    }*/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JAVASCRIPT</title>
+
+<script type="text/javascript">
+function sum(){
+var num1=prompt("Enter first number :");
+var num2=prompt("Enter second number :");
+var result=parseInt(num1)+parseInt(num2);
+alert("Sum="+result);
+}
+
+function demo(){
+	var res=confirm("Do you want to move ahead?");
+	if(res ==true){
+		alert("Move ahead");
+	}
+	else{
+		alert("Did not move ahead");
+	}
+}
+
+function displayGreetings(msg){
+	if(msg==null)
+		{
+		msg="Hi"+"2".sub()
+		}
+	document.write("2".sub()+msg+"2".sup())
+}
+</script>
+
+</head>
+<body>
+<h1>CLICK ANY</h1>
+<input type="button" value="Add" onclick="sum()"/><br/>
+<input type="button" value="Go" onclick="demo()"/><br/>
+<input type="button" value="Greet me" onclick="displayGreetings('Ho ho ho')"/>
+
+
+</body>
+</html>

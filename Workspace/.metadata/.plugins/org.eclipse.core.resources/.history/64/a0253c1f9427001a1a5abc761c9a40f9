@@ -1,0 +1,30 @@
+package Inheritance;
+
+abstract class Animal{
+	abstract void makesSound();
+	
+	void eat() {
+		System.out.println("Animal eats");
+	}
+}
+
+class Dog extends Animal{
+
+	@Override
+	void makesSound() {
+		System.out.println("Barks");
+		
+	}
+}
+
+class Cat extends Animal {
+	void makesSound() {
+		System.out.println("Meow");
+	}
+}
+
+public class AbstractDemo {
+public static void main(String[] args) {
+	
+}
+}

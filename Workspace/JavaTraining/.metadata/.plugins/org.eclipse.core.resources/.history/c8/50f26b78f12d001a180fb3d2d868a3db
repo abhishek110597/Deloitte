@@ -1,0 +1,10 @@
+package jdbcDemos;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class InsertTableDemo {
+ Connection conn1=DBConnection.makeConnection();
+ 
+ 
+}

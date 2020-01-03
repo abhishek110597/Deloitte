@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JAVASCRIPT</title>
+<script type="text/javascript">
+function sum(){
+var num1=prompt("Enter first number :")
+var num2=prompt("Enter second number :")
+var result=parseInt(num1)+parseInt(num2)
+alert("Sum="+result)
+}
+
+function demo(){
+	var res=confirm("Do you want to move ahead?")
+	if(var==true){
+		alert("Move ahead")
+	}
+	else{
+		alert("Did not move ahead")
+	}
+}
+
+</script>
+
+</head>
+<body>
+<h1>CLICK</h1>
+
+
+<input type="button" value="Add" onclick="sum()"/><br/>
+<input type="button" value="Go" onclick="demo()"/>
+</body>
+</html>

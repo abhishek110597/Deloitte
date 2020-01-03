@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient login form</title>
+</head>
+<body>
+	<form>
+		<h2>Patient login form</h2>
+		<table cellspacing="10" cellpadding="10" border="0" align="center">
+			<caption>Patient Form</caption>
+			<tr>
+			<tr>
+				<td>Patient Name:</td>
+				<td><input type="text" name="patientName" id="patientName" /></td>
+			</tr>
+			<tr>
+				<td>Patient Address:</td>
+				<td><textarea name="patientAddress" id="patientAddress" row="5"
+						column="15">
+					</textarea></td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td><input type="radio" value="Male" name="gender" id="male" />Male
+					<input type="radio" value="Female" name="gender" id="female" />Female 
+					<input type="radio" value="Other" name="gender" id="other" />Other</td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" value="Admit" id="submit" /></td>
+					<td align="center"><input type="reset" value="Clear" id="reset" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

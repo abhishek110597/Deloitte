@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Date</title>
+<script type="text/javascript">
+var today=new Date();
+var lastdate=new Date();
+month=prompt("Enter the month number")
+year=prompt("Enter the year")
+bill=prompt("Enter bill amount")
+if(month==1||month==3||||month==5||month==7||month==9||month==12){
+	lastdate.setLastDay(year,month,31)
+}
+else if(month==2)
+	lastdate.setLastDay(year,month,28)
+else
+	lastdate.setLastDay(year,month,30)
+var day=1000*60*60*24;
+x=(lastday-today)/day
+if(x>0)
+	{
+	bill=bill+(x*50)
+	document.write("Bill="+bill)
+	}
+else
+	document.write("Bill="bill)
+</script>
+</head>
+<body>
+
+</body>
+</html>

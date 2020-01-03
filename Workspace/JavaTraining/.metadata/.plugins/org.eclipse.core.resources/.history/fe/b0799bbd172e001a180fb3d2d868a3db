@@ -1,0 +1,48 @@
+package com.CMS.Deloitte.model;
+import java.io.Serializable;
+
+public class Customer implements Serializable {
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5191504945419843489L;
+private int customerId;
+private String productName;
+private String customerAddress;
+private int billAmount;
+public Customer() {
+	
+}
+public Customer(int customerId, String productName, String customerAddress, int billAmount) {
+	super();
+	this.customerId = customerId;
+	this.productName = productName;
+	this.customerAddress = customerAddress;
+	this.billAmount = billAmount;
+}
+public int getCustomerId() {
+	return customerId;
+}
+public void setCustomerId(int customerId) {
+	this.customerId = customerId;
+}
+public String getProductName() {
+	return productName;
+}
+public void setProductName(String productName) {
+	this.productName = productName;
+}
+public String getCustomerAddress() {
+	return customerAddress;
+}
+public void setCustomerAddress(String customerAddress) {
+	this.customerAddress = customerAddress;
+}
+public int getBillAmount() {
+	return billAmount;
+}
+public void setBillAmount(int billAmount) {
+	this.billAmount = billAmount;
+}
+	
+}

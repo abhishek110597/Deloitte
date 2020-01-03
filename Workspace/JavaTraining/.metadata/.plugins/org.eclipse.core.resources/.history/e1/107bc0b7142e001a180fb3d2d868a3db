@@ -1,0 +1,10 @@
+package com.CMS.Deloitte.dao;
+
+import com.CMS.Deloitte.model.Customer;
+
+public class CustomerDAO {
+
+	public boolean addCustomer(Customer customer);
+	
+	
+}

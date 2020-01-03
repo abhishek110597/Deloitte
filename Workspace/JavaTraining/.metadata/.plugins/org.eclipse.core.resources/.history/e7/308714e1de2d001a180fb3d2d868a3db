@@ -1,0 +1,23 @@
+package ioDemos;
+
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class RandomDemo {
+public static void main(String[] args) throws IOException {
+	RandomAccessFile file=new RandomAccessFile("friday.txt","rw");
+	file.writeUTF("Today is friday");
+	System.out.println(file.getFilePointer());
+	file.seek(0);
+	System.out.println(file.getFilePointer());
+	String str=file.readUTF();
+	System.out.println(str);
+	file.seek(file.length());
+	file.writeUTF("Abhishek");
+	file.seek(17);
+	str=file.readUTF();
+
+	System.out.println(str);
+	
+}
+}

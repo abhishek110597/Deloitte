@@ -1,0 +1,13 @@
+package jdbcDemos;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Demo {
+public static void main(String[] args) throws ClassNotFoundException {
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	System.out.println("Driver Loaded");
+	
+	Connection conn= DriverManager("jdbc:oracle:thin:@hr/hrlocalhost:1521:XE","system","admin");
+}
+}

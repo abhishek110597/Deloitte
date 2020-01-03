@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+</style>
+<title>Players</title>
+</head>
+<body>
+<p>MS Dhoni</p>
+<h1>About Dhoni</h1>
+
+<p>Virat Kohli</p>
+<h1>About Kohli</h1>
+
+<p>Shikar Dhawan</p>
+<h1>About Dhawan</h1>
+
+</body>
+</html>

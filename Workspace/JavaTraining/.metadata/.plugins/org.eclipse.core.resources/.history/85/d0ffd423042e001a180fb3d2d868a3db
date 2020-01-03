@@ -1,0 +1,93 @@
+package jdbcDemos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class ProductOperations {
+
+	static void updateProduct() {
+
+		Product product = new Product();
+
+		Connection conn1 = DBConnection.makeConnection();
+		try {
+			Statement stat = conn1.createStatement();
+
+			PreparedStatement stat1 = conn1
+					.prepareStatement("update hr.product set 	prodName=? ,pric=? ,qoh=? where prodId=?");
+			stat1.setInt(4, product.getProdid());
+			stat1.setString(1, product.getProdName());
+			stat1.setInt(2, product.getPrice());
+			stat1.setInt(3, product.getQoh());
+			stat1.executeUpdate();
+
+			System.out.println(product.getProdName() + ", Details updated");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	static void insertProduct() {
+		Product product = new Product();
+
+		Connection conn1 = DBConnection.makeConnection();
+		try {
+			Statement stat = conn1.createStatement();
+
+			PreparedStatement stat1 = conn1.prepareStatement("insert into product values(?,?,?,?)");
+			stat1.setInt(1, product.getProdid());
+			stat1.setString(2, product.getProdName());
+			stat1.setInt(3, product.getPrice());
+			stat1.setInt(4, product.getQoh());
+			stat1.executeUpdate();
+
+			System.out.println(product.getProdName() + ", Details updated");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	static void displayProduct() {
+		Product product = new Product();
+
+		Connection conn1 = DBConnection.makeConnection();
+		try {
+			Statement stat = conn1.createStatement();
+			String displayQuery="select * from hr.product";
+			ResultSet res=stat.executeQuery(displayQuery);
+			while(res.next()) {
+				System.out.print();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter choice\n1:Insert\nUpdate\nDelete\nDisplay");
+		int choice = sc.nextInt();
+		switch (choice) {
+		case 2:
+			updateProduct();
+			break;
+		case 1:
+			insertProduct();
+			break;
+		case 3:
+			displayProduct();
+			break;
+		}
+
+	}
+
+	}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Image Demo</title>
+</head>
+<body>
+<p align="center">
+<img src="home.jpg" height =300 width=300 alt="Bad Internet" usemap="#mymap"/>
+<map name="mymap">
+<area shape="rect" coords="40,70,250,220" href="index.html" alt="Index">
+</map>
+</p>
+</body>
+</html>
