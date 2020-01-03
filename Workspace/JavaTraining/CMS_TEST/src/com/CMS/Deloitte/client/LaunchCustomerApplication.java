@@ -12,6 +12,7 @@ public class LaunchCustomerApplication {
 		System.out.println("#### 2.Update Customer ####");
 		System.out.println("#### 3.Delete Customer ###");
 		System.out.println("#### Welcome to Customer App ###");
+		System.out.println("#### 5.Find Customer ###");
 		System.out.println("#### 6.EXIT ###");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter your choice");
@@ -30,6 +31,10 @@ public class LaunchCustomerApplication {
 			System.out.println(result);
 		} else if (choice == 3) {
 			System.out.println("Enter the customerId to be deleted");
+			int id=sc.nextInt();
+			CustomerDAOImpl impl = new CustomerDAOImpl();
+			boolean result=impl.deleteCustomer(id);
+			System.out.println(result);
 		} else if (choice == 4) {
 
 		} else if (choice == 5) {

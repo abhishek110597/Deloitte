@@ -64,7 +64,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		try {
 		PreparedStatement stat=conn.PreparedStatement(DELETE_CUSTOMER_QUERY);
-		stat.setInt(1, customer.getCustomerId());
+		stat.setInt(1,customerId);
 		result=stat.executeUpdate();
 		
 		return result ==0 ? false : true;
@@ -83,7 +83,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
 	public Customer findCustomer(int customerId) {
-		return null;
+		Customer customer= new Customer;
+		system
+		return customer;
 	}
 
 	@Override
