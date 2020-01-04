@@ -35,10 +35,10 @@ public class Welcome extends HttpServlet {
 		int customerId=Integer.parseInt(request.getParameter("customerId"));
 		String customerAddress=request.getParameter("customerAddress");
 		int billAmount=Integer.parseInt(request.getParameter("billAmount"));
-		/*response.getWriter().println("<h2>You are visitor number:"+counter+"</h1>");
+		response.getWriter().println("<h2>You are visitor number:"+counter+"</h1>");
 		response.getWriter().println("<h1>Customer Details</h><br/>");
 		response.getWriter().println("<p>Customer Id : "+customerId+"<br/>Customer Name :"+customerName+"<br/>Customer Address : "+customerAddress+"<br/>Customer Bill Amount : "+billAmount+"<br/></p>");
-		response.getWriter().println("</body></html>");*/
+		response.getWriter().println("</body></html>");
 		
 		Customer customer=new Customer(customerId,customerName,customerAddress,billAmount);
 		
