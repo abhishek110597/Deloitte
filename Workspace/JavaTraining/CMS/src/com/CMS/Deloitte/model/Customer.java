@@ -50,7 +50,7 @@ public class Customer implements Serializable {
 		return customerName;
 	}
 
-	public void setProductName(String customerName) {
+	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
 	}
 
@@ -68,6 +68,12 @@ public class Customer implements Serializable {
 
 	public void setBillAmount(int billAmount) {
 		this.billAmount = billAmount;
+	}
+
+	@Override
+	public String toString() {
+		return "\nCustomer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", billAmount=" + billAmount + "]";
 	}
 
 }

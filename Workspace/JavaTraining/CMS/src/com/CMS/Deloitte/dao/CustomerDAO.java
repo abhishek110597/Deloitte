@@ -11,7 +11,7 @@ public interface CustomerDAO {
 
 	public boolean deleteCustomer(int customerId);
 
-	public List<Customer> listCustomer();
+	public List<Customer> listCustomers();
 
 	public Customer findCustomer(int customerId);
 
