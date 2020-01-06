@@ -22,12 +22,21 @@ public class ProductShop extends HttpServlet {
 
     int counter = 0;
     
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String uName=request.getParameter("username");
-		response.getWriter().println("<h1>Welcome to my Product site-"+uName+"</h1><br/>");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	String uName=request.getParameter("username");
+		response.getWriter().println("<body bgcolor='grey'><h1>Welcome to my Product site-"+uName+"</h1><br/>");
 		response.getWriter().println("<a href='shop.html'>Shop</a><br/>");
 		response.getWriter().println("<h4><a href='Welcome'>Welcome</a></h4><br/>");
-		response.getWriter().println("<a href='CustomerForm.html'>Customer</a><br/>");
+		response.getWriter().println("<a href='CustomerForm.html'>Add Customer</a><br/></body>");
+    }
+    
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uName=request.getParameter("username");
+		response.getWriter().println("<body bgcolor='sky blue'><h1>Welcome to my Product site-"+uName+"</h1><br/>");
+		response.getWriter().println("<a href='shop.html'>Shop</a><br/>");
+		response.getWriter().println("<h4><a href='Welcome'>Welcome</a></h4><br/>");
+		response.getWriter().println("<a href='CustomerForm.html'>Add Customer</a><br/></body>");
 		
 		
 	}

@@ -21,9 +21,33 @@ public class Welcome extends HttpServlet {
      */
     public Welcome() {
         super();
+        System.out.println("Welcome Cons");
         // TODO Auto-generated constructor stub
     }
-
+    @Override
+    public void init() throws ServletException {
+    	// TODO Auto-generated method stub
+    	super.init();
+    	System.out.println("Welcome init");
+    }
+    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	counter++;
+		response.getWriter().println("<html><body>");
+		String customerName=request.getParameter("customerName");
+		int customerId=Integer.parseInt(request.getParameter("customerId"));
+		String customerAddress=request.getParameter("customerAddress");
+		int billAmount=Integer.parseInt(request.getParameter("billAmount"));
+		response.getWriter().println("<h2>You are visitor number:"+counter+"</h1>");
+		response.getWriter().println("<h1>Customer Details</h><br/>");
+		response.getWriter().println("<p>Customer Id : "+customerId+"<br/>Customer Name :"+customerName+"<br/>Customer Address : "+customerAddress+"<br/>Customer Bill Amount : "+billAmount+"<br/></p>");
+		response.getWriter().println("</body></html>");
+		
+    }
+    
+    
+    
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -39,7 +63,7 @@ public class Welcome extends HttpServlet {
 		response.getWriter().println("<h1>Customer Details</h><br/>");
 		response.getWriter().println("<p>Customer Id : "+customerId+"<br/>Customer Name :"+customerName+"<br/>Customer Address : "+customerAddress+"<br/>Customer Bill Amount : "+billAmount+"<br/></p>");
 		response.getWriter().println("</body></html>");
-		
+		System.out.println("Welcome SERVICE");
 		Customer customer=new Customer(customerId,customerName,customerAddress,billAmount);
 		
 		CustomerDAO customerDAO=new CustomerDAOImpl();
@@ -52,5 +76,10 @@ public class Welcome extends HttpServlet {
 		}
 
 	}
-
+@Override
+public void destroy() {
+	// TODO Auto-generated method stub
+	super.destroy();
+	System.out.println("DESTROY");
+}
 }

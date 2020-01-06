@@ -39,4 +39,33 @@
     <servlet-name>ProductShop</servlet-name>
     <url-pattern>/ProductShop</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ConnectServlet</display-name>
+    <servlet-name>ConnectServlet</servlet-name>
+    <servlet-class>com.ConnectServlet</servlet-class>
+    <init-param>
+      <description></description>
+      <param-name>userName</param-name>
+      <param-value>Abhishek</param-value>
+    </init-param>
+    <init-param>
+      <description></description>
+      <param-name>companyName</param-name>
+      <param-value>Deloitte</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectServlet</servlet-name>
+    <url-pattern>/ConnectServlet</url-pattern>
+  </servlet-mapping>
+  <context-param>
+  <param-name>itemName</param-name>
+  <param-value>Chair</param-value>
+  </context-param>
+  <context-param>
+  <param-name>name</param-name>
+  <param-value>Abhi</param-value>
+  </context-param>
+  
 </web-app>

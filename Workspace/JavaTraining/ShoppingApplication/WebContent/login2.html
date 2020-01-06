@@ -13,9 +13,9 @@
 	}
 	
 	function validate() {
-		var uname = document.getElementById("username").value
+		var uname = document.getElementById("userName").value
 		var pass = document.getElementById("password").value
-		if (uname == 0) {
+		if (uname.length == 0) {
 			alert("Please enter a name")
 		} else if (pass.length< 6) {
 			alert("Enter the valid password with aleast 6 characters")
@@ -30,13 +30,13 @@
 <body>
 <span id="span">Hi</span>
 <div id="div">oY</div>
-	<form action="ProductShop" method="post" onSubmit="return validate()">
+	<form action="AuthenticationServlet"  onSubmit="return validate()">
 		<h2>Login form</h2>
 		<table cellspacing="10" cellpadding="10" border="0" align="center">
 			<caption>Login Form</caption>
 			<tr>
 				<td>User Name:</td>
-				<td><input type="text" name="username" id="username" /></td>
+				<td><input type="text" name="userName" id="userName" /></td>
 			</tr>
 			<tr>
 				<td>Password:</td>
