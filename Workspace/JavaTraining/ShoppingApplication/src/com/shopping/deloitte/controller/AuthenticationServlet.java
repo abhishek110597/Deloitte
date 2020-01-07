@@ -3,7 +3,6 @@ package com.shopping.deloitte.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -52,9 +51,7 @@ public class AuthenticationServlet extends HttpServlet {
 				if(c.getName().equals(userName)) {
 					already=true;
 					//out.println("111111");
-
 					break;
-
 				}
 			}
 		}
@@ -66,7 +63,6 @@ public class AuthenticationServlet extends HttpServlet {
 		}
 		else {
 			out.println("<h1>Welcome back, "+userName+"</h1>");
-
 		}
 		out.println("<form action='AdminServlet'>");
 		out.println("<h1>Wife Name<input type='text' name='wifeName'></h1>");
