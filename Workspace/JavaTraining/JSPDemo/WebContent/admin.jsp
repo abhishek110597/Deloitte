@@ -16,11 +16,8 @@
 <c:forEach begin="1" end="5" step="1" var="i">
 <h1>${i}</h1>
 </c:forEach>
-<%for(int i=0;i<6;i++){
-	%>
-<p:name></p:name>
+<h1><p:name nameToPrint="Abhi" noOfTimes="5"></p:name></h1>
 <br/>
-<%} %>
 <br/>
 <p:deladd></p:deladd>
 <%-- <%="Customer Detail are "+session.getAttribute("customer")  %>
