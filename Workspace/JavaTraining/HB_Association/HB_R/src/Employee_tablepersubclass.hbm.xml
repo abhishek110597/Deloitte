@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="association.Employee" table="hr.Employee_TPS">
+		<id name="employeeId" column="Empid" />
+		<property name="employeeName" column="Empname" length="10" />
+	</class>
+		<joined-subclass name="association.RegularEmployee"
+			extends="association.Employee" table="hr.RegularEmployee_TSP">
+			<key column="employeeId"></key>
+			<property name="salary"></property>
+			<property name="bonus"></property>
+		</joined-subclass>
+
+		<joined-subclass name="association.ContractEmployee"
+			extends="association.Employee" table="hr.ContractEmployee_TSP">
+			<key column="employeeId"></key>
+			<property name="payPerDay"></property>
+			<property name="contractDuration"></property>
+		</joined-subclass>
+</hibernate-mapping>

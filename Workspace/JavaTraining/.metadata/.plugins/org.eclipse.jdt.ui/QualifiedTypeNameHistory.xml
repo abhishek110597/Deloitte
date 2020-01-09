@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
-<fullyQualifiedTypeName name="java.lang.InterruptedException"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.io.RandomAccessFile"/>
 <fullyQualifiedTypeName name="java.sql.DriverAction"/>
@@ -16,15 +14,12 @@
 <fullyQualifiedTypeName name="com.CMS.Deloitte.client.LaunchCustomerApplication"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.CMS.Deloitte.dbcon.DBConnection"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="jdbcDemos.DBConnection"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
-<fullyQualifiedTypeName name="com.CMS.Deloitte.dao.CustomerDAO"/>
-<fullyQualifiedTypeName name="com.CMS.Deloitte.dao.impl.CustomerDAOImpl"/>
 <fullyQualifiedTypeName name="Arthematic"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Subtract"/>
@@ -35,7 +30,6 @@
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="javax.websocket.Session"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
-<fullyQualifiedTypeName name="com.CMS.Deloitte.model.Customer"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
@@ -44,4 +38,26 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="javax.servlet.jsp.JspWriter"/>
 <fullyQualifiedTypeName name="javax.servlet.jsp.tagext.TagSupport"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="org.hibernate.cfg.AnnotationConfiguration"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="org.hibernate.Criteria"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.Restrictions"/>
+<fullyQualifiedTypeName name="com.Sum"/>
+<fullyQualifiedTypeName name="com.CMS.Deloitte.dao.CustomerDAO"/>
+<fullyQualifiedTypeName name="com.CMS.Deloitte.dao.impl.CustomerDAOImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.CMS.Deloitte.model.Customer"/>
+<fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+<fullyQualifiedTypeName name="association.Employee"/>
+<fullyQualifiedTypeName name="association.RegularEmployee"/>
+<fullyQualifiedTypeName name="association.ContractEmployee"/>
 </qualifiedTypeNameHistroy>

@@ -2,11 +2,14 @@ package com.CMS.Deloitte.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.criterion.Restrictions;
+
 import com.CMS.Deloitte.dao.CustomerDAO;
 import com.CMS.Deloitte.model.Customer;
 
@@ -90,6 +93,17 @@ public class CustomerDAOImpl implements CustomerDAO {
 		List<String> customerNames=query.list();
 		session.close();
 		return customerNames;
+	}
+
+	@Override
+	public List<Customer> filterCustomers(String customerAddress, int amount) {
+		Session session=factory.openSession();
+		Criteria criteria=session.createCriteria(Customer.class);
+		criteria.add(Restrictions.like("customerAddress", customerAddress));
+		criteria.add(Restrictions.gt("billAmount",amount));
+		List<Customer> allCustomer=criteria.list();
+		session.close();
+		return allCustomer;
 	}
 
 	}

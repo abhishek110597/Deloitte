@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/hibernatelibs_upload/hibernatelibs_upload/lib_annotation/antlr-2.7.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/hibernatelibs_upload/hibernatelibs_upload/lib_annotation/commons-collections-3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/hibernatelibs_upload/hibernatelibs_upload/lib_annotation/dom4j-1.6.1.jar"/>
@@ -15,5 +16,6 @@
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/hibernatelibs_upload/hibernatelibs_upload/lib_annotation/slf4j-api-1.5.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/hibernatelibs_upload/hibernatelibs_upload/lib_annotation/slf4j-simple-1.5.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/ojdbc14.jar/ojdbc14.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

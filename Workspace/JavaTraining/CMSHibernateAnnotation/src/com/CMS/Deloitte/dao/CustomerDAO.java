@@ -18,4 +18,6 @@ public interface CustomerDAO {
 	public boolean isCustomerExists(int customerId);
 	
 	public List<String> filterCustomers(int amount);
+	
+	public List<Customer> filterCustomers(String customerAddress,int amount);
 }

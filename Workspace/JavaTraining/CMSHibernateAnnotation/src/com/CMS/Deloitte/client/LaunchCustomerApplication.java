@@ -21,7 +21,8 @@ public class LaunchCustomerApplication {
 			System.out.println("#### 4.Display all customer ###");
 			System.out.println("#### 5.Find Customer ###");
 			System.out.println("#### 6.Find Customer(s) by >Amount ###");
-			System.out.println("#### 7.E X I T  ###");
+			System.out.println("#### 7.Find Customer(s) by >Amount and Address  ###");
+			System.out.println("#### 10.E X I T  ###");
 			System.out.println("Enter your choice");
 			choice = sc.nextInt();
 			if (choice == 1) {
@@ -80,7 +81,16 @@ public class LaunchCustomerApplication {
 				allCustomers = customerDAO.filterCustomers(amount);
 				System.out.println("List of all Customers with bill amount more than "+amount);
 				System.out.println(allCustomers);
-			}else if (choice == 7) {
+			} else if (choice == 6) {
+				List<Customer> allCustomers = new ArrayList<Customer>();
+				System.out.println("Enter the amount to get customer names who spend more than the amount");
+				int amount=sc.nextInt();
+				System.out.println("Enter the address to get customer names of who like there");
+				String address=sc.next();
+				allCustomers = customerDAO.filterCustomers(address,amount);
+				System.out.println("List of all Customers with bill amount more than "+amount);
+				System.out.println(allCustomers);
+			}else if (choice == 10) {
 				System.out.println("Thank you for using the app");
 				System.exit(0);
 				sc.close();

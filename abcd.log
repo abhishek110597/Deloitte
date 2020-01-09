@@ -1,0 +1,79 @@
+14:09:38,936 ERROR BasicLazyInitializer:103 - CGLIB Enhancement failed: association.ContractEmployee
+java.lang.IllegalArgumentException: Superclass has no null constructors but no arguments were given
+	at net.sf.cglib.proxy.Enhancer.emitConstructors(Enhancer.java:783)
+	at net.sf.cglib.proxy.Enhancer.emit(Enhancer.java:749)
+	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:481)
+	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:215)
+	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:368)
+	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:280)
+	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:597)
+	at org.hibernate.proxy.CGLIBLazyInitializer.getProxyFactory(CGLIBLazyInitializer.java:94)
+	at org.hibernate.proxy.CGLIBProxyFactory.postInstantiate(CGLIBProxyFactory.java:42)
+	at org.hibernate.tuple.PojoTuplizer.buildProxyFactory(PojoTuplizer.java:139)
+	at org.hibernate.tuple.AbstractTuplizer.<init>(AbstractTuplizer.java:83)
+	at org.hibernate.tuple.PojoTuplizer.<init>(PojoTuplizer.java:54)
+	at org.hibernate.tuple.TuplizerLookup.create(TuplizerLookup.java:47)
+	at org.hibernate.tuple.EntityMetamodel.<init>(EntityMetamodel.java:212)
+	at org.hibernate.persister.entity.BasicEntityPersister.<init>(BasicEntityPersister.java:400)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:104)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:55)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:199)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1054)
+	at association.Client.main(Client.java:13)
+14:09:38,953 ERROR BasicLazyInitializer:103 - CGLIB Enhancement failed: association.RegularEmployee
+java.lang.IllegalArgumentException: Superclass has no null constructors but no arguments were given
+	at net.sf.cglib.proxy.Enhancer.emitConstructors(Enhancer.java:783)
+	at net.sf.cglib.proxy.Enhancer.emit(Enhancer.java:749)
+	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:481)
+	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)
+	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:215)
+	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:368)
+	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:280)
+	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:597)
+	at org.hibernate.proxy.CGLIBLazyInitializer.getProxyFactory(CGLIBLazyInitializer.java:94)
+	at org.hibernate.proxy.CGLIBProxyFactory.postInstantiate(CGLIBProxyFactory.java:42)
+	at org.hibernate.tuple.PojoTuplizer.buildProxyFactory(PojoTuplizer.java:139)
+	at org.hibernate.tuple.AbstractTuplizer.<init>(AbstractTuplizer.java:83)
+	at org.hibernate.tuple.PojoTuplizer.<init>(PojoTuplizer.java:54)
+	at org.hibernate.tuple.TuplizerLookup.create(TuplizerLookup.java:47)
+	at org.hibernate.tuple.EntityMetamodel.<init>(EntityMetamodel.java:212)
+	at org.hibernate.persister.entity.BasicEntityPersister.<init>(BasicEntityPersister.java:400)
+	at org.hibernate.persister.entity.SingleTableEntityPersister.<init>(SingleTableEntityPersister.java:104)
+	at org.hibernate.persister.PersisterFactory.createClassPersister(PersisterFactory.java:55)
+	at org.hibernate.impl.SessionFactoryImpl.<init>(SessionFactoryImpl.java:199)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1054)
+	at association.Client.main(Client.java:13)
+14:09:39,026 ERROR SchemaUpdate:148 - Unsuccessful: create table hr.ContractEmployee_TPCS (employeeId number(10,0) not null, payPerDay number(10,0), contractDuration number(10,0), Empname varchar2(10), primary key (employeeId))
+14:09:39,026 ERROR SchemaUpdate:149 - ORA-00955: name is already used by an existing object
+
+14:09:39,028 ERROR SchemaUpdate:148 - Unsuccessful: create table hr.Employee_TPCS (Empid number(10,0) not null, Empname varchar2(10), primary key (Empid))
+14:09:39,028 ERROR SchemaUpdate:149 - ORA-00955: name is already used by an existing object
+
+14:09:39,030 ERROR SchemaUpdate:148 - Unsuccessful: create table hr.RegularEmployee_TPCS (employeeId number(10,0) not null, salary number(10,0), bonus number(10,0), Empname varchar2(10), primary key (employeeId))
+14:09:39,030 ERROR SchemaUpdate:149 - ORA-00955: name is already used by an existing object
+
+14:09:39,069 ERROR JDBCExceptionReporter:58 - ORA-00001: unique constraint (HR.SYS_C007101) violated
+
+14:09:39,069 ERROR JDBCExceptionReporter:58 - ORA-00001: unique constraint (HR.SYS_C007101) violated
+
+14:09:39,069 ERROR AbstractFlushingEventListener:277 - Could not synchronize database state with session
+org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.ErrorCodeConverter.convert(ErrorCodeConverter.java:74)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:43)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:179)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:226)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:136)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:274)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:27)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:675)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:293)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:86)
+	at association.Client.main(Client.java:27)
+Caused by: java.sql.BatchUpdateException: ORA-00001: unique constraint (HR.SYS_C007101) violated
+
+	at oracle.jdbc.dbaccess.DBError.throwBatchUpdateException(DBError.java:458)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:3907)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:57)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:172)
+	... 8 more

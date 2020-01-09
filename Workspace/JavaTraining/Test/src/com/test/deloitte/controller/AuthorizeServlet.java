@@ -43,8 +43,8 @@ public class AuthorizeServlet extends HttpServlet {
 		String name=request.getParameter("name");
 		HttpSession session=request.getSession();
 		session.setAttribute("name", name);
-		String correctAnswers[]= {"A","B","C"};
-		session.setAttribute("correctAnswers", correctAnswers);
+//		String correctAnswers[]= {"A","B","C"};
+//		session.setAttribute("correctAnswers", correctAnswers);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("Instructions.jsp");
 		dispatcher.forward(request, response);
 	}
