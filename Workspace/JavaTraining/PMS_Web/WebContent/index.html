@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product Details</title>
+<script type="text/javascript">
+	function validate() {
+		pid = false
+		pname = false
+		pri = false
+		qohs = false
+
+		var productId = document.getElementById("productId").value
+		var productName = document.getElementById("productName").value
+		var price = document.getElementById("price").value
+		var qoh = document.getElementById("qoh").value
+		
+		var errorProductId = document.getElementById("errorProductId")
+		var errorProductName = document.getElementById("errorProductName")
+		var errorPrice = document
+				.getElementById("errorPrice")
+		var errorqoh = document.getElementById("errorqoh")
+
+		if (productId == 0 || productId.length < 6) {
+			errorProductId.innerHTML = "<font color='red'>Invalid ProductID, Must have atleast 6 characters"
+			return false;
+		} else {
+			errorProductId.innerHTML = ""
+			pid = true
+		}
+
+
+		if (productName == 0) {
+			errorProductName.innerHTML = "<font color='red'>Invalid Product Name"
+				return false;
+		}
+		if (price == 0) {
+			errorProductName.innerHTML = "<font color='red'>Invalid Price"
+				return false;
+		}
+	}
+</script>
+</head>
+<body>
+<div align="center">
+	<form action="Welcome" onSubmit="return validate()">
+		<h2>Product emtry form</h2>
+		<table cellspacing="10" cellpadding="10" border="0" align="center">
+			<caption>Login Form</caption>
+			<tr>
+				<td>Product ID:</td>
+				<td><input type="text" name="productId" id="productId" /></td>
+				<td><span id="errorProductId"></span></td>
+				
+				
+			</tr>
+			<tr>
+				<td>Product Name:</td>
+				<td><input type="text" name="productName" id="productName" /></td>
+				<td><span id="errorProductName"></span></td>
+			</tr>
+			<tr>
+				<td>Price:</td>
+				<td><input type="text" name="price"
+					id="price" /></td>
+				<td><span id="errorPrice"></span></td>
+			</tr>
+			<tr>
+				<td>Quantity on Hand:</td>
+				<td><input type="number" name="qoh" id="qoh" /></td>
+				<td><span id="errorQoh"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Submit"
+					id="Go" onclick="validate()"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="reset" id="reset" /></td>
+			</tr>	
+		</table>
+		<div id=display align="center"></div>
+	</form>
+	</div>
+</body>
+</html>

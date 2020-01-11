@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="cust" class="com.SpringDemo1.Customer" autowire="constructor">
+		<constructor-arg name="customerId" value="900" type="int"/>
+		<constructor-arg name="customerName" value="Abhishek" />
+		<constructor-arg name="customerAddress" value="Bangalore" />
+		<property name="billAmount" value="49000" />
+		<!-- <property name="contactDetails" ref="cd" /> -->
+	</bean>
+
+	<bean id="cd1" class="com.SpringDemo1.ContactDetails">
+		<property name="mobileNumber" value="8310546593" />
+		<property name="emailId" value="abks15cs@cmrit.ac.in" />
+	</bean>
+
+	<bean id="cd" class="demo.ContactDetails">
+		<property name="mobileNumber" value="6366721244" />
+		<property name="emailId" value="abks15cs@cmrit.ac.in" />
+	</bean>
+
+	<bean id="cust2" class="com.SpringDemo1.Customer">
+		<constructor-arg name="customerId" value="901"></constructor-arg>
+		<constructor-arg name="customerName" value="Sourav"></constructor-arg>
+		<constructor-arg name="customerAddress" value="Pune"></constructor-arg>
+		<constructor-arg name="billAmount" value="11901"></constructor-arg>
+	</bean>
+
+</beans>
+	

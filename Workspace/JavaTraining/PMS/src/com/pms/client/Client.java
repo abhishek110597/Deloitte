@@ -1,0 +1,7 @@
+package com.pms.client;
+
+public class Client {
+	public static void main(String[] args) {
+		LaunchProductApplication.startProductapp();
+	}
+}
