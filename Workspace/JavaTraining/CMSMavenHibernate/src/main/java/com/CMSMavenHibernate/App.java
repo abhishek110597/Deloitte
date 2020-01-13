@@ -1,4 +1,4 @@
-package com.CMSMAvenHibernate;
+package com.CMSMavenHibernate;
 
 /**
  * Hello world!

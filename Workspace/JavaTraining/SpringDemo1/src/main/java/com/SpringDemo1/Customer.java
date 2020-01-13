@@ -2,6 +2,7 @@ package com.SpringDemo1;
 //import demo.ContactDetails;
 import java.io.Serializable;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Customer implements Serializable {
 	/**
@@ -13,9 +14,28 @@ public class Customer implements Serializable {
 	private String customerAddress;
 	private int billAmount;
 	private ContactDetails contactDetails;
+	private Set cards;
+
+	public Set getCards() {
+		return cards;
+	}
+
+
+	public void display() {
+	System.out.println("Init");
+	}
+	
+	public void cleanUp() {
+		System.out.println("Clean up");
+	}
+	public void setCards(Set cards) {
+		this.cards = cards;
+	}
+
+
 
 	public Customer() {
-		System.out.println("11");
+		System.out.println("Con called");
 	}
 	
 	
@@ -112,7 +132,8 @@ public class Customer implements Serializable {
 	@Override
 	public String toString() {
 		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
-				+ customerAddress + ", billAmount=" + billAmount + ",\ncontactDetails=" + contactDetails + "]";
+				+ customerAddress + ", billAmount=" + billAmount + ", \ncontactDetails=" + contactDetails + ", \ncards="
+				+ cards + "]";
 	}
 
 }

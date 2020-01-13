@@ -2,14 +2,17 @@ package com;
 //import demo.ContactDetails;
 import java.io.Serializable;
 import java.util.Scanner;
+import javax.annotation.*;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Customer implements Serializable {
+public class Customer implements DisposableBean,InitializingBean {
 	/**
 		 * 
 		 */
-	private static final long serialVersionUID = 5191504945419843489L;
+	//private static final long serialVersionUID = 5191504945419843489L;
 	private int customerId;
 	private String customerName;
 	private String customerAddress;
@@ -19,10 +22,20 @@ public class Customer implements Serializable {
 	private ContactDetails contactDetails;
 
 	public Customer() {
+		System.out.println("Con called");
 	}
 	
 	
 	
+	@PostConstruct
+	public void ds() {
+		System.out.println("#### INIT");
+	}
+	
+	@PreDestroy
+	public void dd() {
+		System.out.println("#### DESTROY");
+	}
 	public Customer(int customerId, ContactDetails contactDetails) {
 		super();
 		this.customerId = customerId;
@@ -113,6 +126,18 @@ public class Customer implements Serializable {
 	public String toString() {
 		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
 				+ customerAddress + ", billAmount=" + billAmount + ",\ncontactDetails=" + contactDetails + "]";
+	}
+
+
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("via interface");
+		
+	}
+
+	public void destroy() throws Exception {
+		System.out.println("via interface");
+		
 	}
 
 }
