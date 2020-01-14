@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=CMSHibernateAnnotation/src&lt;com.CMS.Deloitte.dao.impl{CustomerDAOImpl.java[CustomerDAOImpl" modifiers="1" timestamp="1578545271075"/>
+<typeInfo handle="=SpringMVCDemo1/src&lt;com.CMS.Deloitte.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1578977938216"/>
+<typeInfo handle="=SpringMVCDemo1/C:\/Deloitte\/Workspace\/JavaTraining\/SpringMVCDemo1\/WebContent\/WEB-INF\/lib\/ojdbc14.jar&lt;oracle.sql(CustomDatumFactory.class[CustomDatumFactory" modifiers="1537" timestamp="1578911693092"/>
 </typeInfoHistroy>

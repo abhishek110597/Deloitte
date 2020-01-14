@@ -1,0 +1,55 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer login form</title>
+</head>
+<body>
+<f:form action="SaveProduct.do" onSubmit="return validate()">
+	<form >
+		<h2>Product form</h2>
+		<table cellspacing="10" cellpadding="10" border="0" align="center">
+			<caption>Product Form</caption>
+			<tr>
+				<td>Product ID :</td>
+				<td><f:input path="productId" name="productId" id="productId"/></td>
+				<td><span id="errorProductId"></span></td>
+				
+				
+			</tr>
+			<tr>
+				<td>Product Name :</td>
+				<td><f:input path="productName" name="productName" id="productName" /></td>
+				<td><span id="errorProductName"></span></td>
+			</tr>
+			<tr>
+				<td>Price :</td>
+				<td><f:input path="price" name="price"
+					id="price" /></td>
+				<td><span id="errorPrice"></span></td>
+			</tr>
+			<tr>
+				<td>Quantity :</td>
+				<td><f:input path="qoh" name="qoh" id="qoh" /></td>
+				<td><span id="errorQoh"></span></td>
+			</tr>
+			<tr>
+				<td align="center"><input type="submit" value="Submit" id="Go"/></td>
+				<td align="center"><input type="submit" value="Fetch" formaction="FetchProduct.do"/>
+			</tr>	
+			<tr>
+			<td align="center"><input type="submit" value="Update" formaction="UpdateProduct.do"/></td>
+			<td align="center"><input type="submit" value="Delete" formaction="DeleteCustomer.do"/></td>
+			</tr>
+			<tr>				
+			<td colspan="2" align="center"><input type="reset" id="reset" /></td>
+			</tr>
+		</table>
+		<div id=display align="center"></div>
+	</form>
+	</f:form>
+</body>
+</html>
+

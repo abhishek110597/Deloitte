@@ -19,7 +19,6 @@ public class CustomerController {
 
 	@RequestMapping("/saveCustomer")
 	public ModelAndView saveCustomerDetails(Customer customer) {
-		System.out.println(customer);
 		boolean status=customerService.addCustomer(customer);
 		ModelAndView view = new ModelAndView();
 		if(status) {
@@ -27,8 +26,8 @@ public class CustomerController {
 		view.addObject("customer1", customer);
 		}
 		else {
-			view.setViewName("addCustomerFail");
-			view.addObject("customer1", customer);
+			view.setViewName("updationCustomerExists");
+			view.addObject("customerFail", "Bill Amount cannot be negative");
 		}
 		return view;
 	}
@@ -54,7 +53,7 @@ public class CustomerController {
 			return view;
 		} else {
 			view.setViewName("updationCustomerExists");
-			view.addObject("customer1", customer);
+			view.addObject("customerFail", "Customer doesnot exist, hence cannot update");
 			return view;
 		}
 
