@@ -93,7 +93,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 				customer.setCustomerId(res.getInt(1));
 				customer.setCustomerName(res.getString(2));
 				customer.setCustomerAddress(res.getString(3));
-				customer.setBillAmount(res.getInt(1));
+				customer.setBillAmount(res.getInt(4));
 				allCustomers.add(customer);
 			}
 		}catch(Exception e) {
