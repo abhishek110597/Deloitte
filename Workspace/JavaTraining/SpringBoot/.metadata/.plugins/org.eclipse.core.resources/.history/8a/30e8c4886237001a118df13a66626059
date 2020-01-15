@@ -1,0 +1,81 @@
+package com.pms.deloitte.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.pms.deloitte.model.Product;
+import com.pms.deloitte.service.ProductService;
+
+@Controller
+public class ProductController {
+
+	@Autowired
+	ProductService productService;
+	
+	@RequestMapping("/saveProduct")
+	public ModelAndView saveProduct(Product product) {
+		ModelAndView view=new ModelAndView("redirect:/product");
+//		System.out.println(product);
+		view.addObject("command", new Product());
+		productService.addProduct(product);
+		List<Product> allProducts=productService.listProducts();
+		view.addObject("allProducts", allProducts);
+		return view;
+	}
+	
+	@RequestMapping("/deleteProduct/{prodId}")
+	public ModelAndView deleteProduct(@PathVariable("prodId")Integer productId) {
+		ModelAndView view=new ModelAndView("redirect:/product");
+		productService.deleteProduct(productId);
+		return view;
+	}
+
+	
+//	@RequestMapping("/deleteProduct")
+//	public ModelAndView deleteProduct(Product product) {
+//		ModelAndView view=new ModelAndView("redirect:/product");
+//		productService.deleteProduct(product.getProductId());
+//		view.addObject("command", new Product());
+//		return view;
+//	}
+	
+	
+//	@RequestMapping("/updateProduct")
+//	public ModelAndView updateProduct(Product product) {
+//		ModelAndView view=new ModelAndView("ProductForm");
+//		productService.updateProduct(product);
+//		view.addObject("command", new Product());
+//		return view;
+//	}
+	
+	@RequestMapping("/updateProduct/{prodId}")
+	public ModelAndView updateProduct(@PathVariable("prodId")Integer productId) {
+		ModelAndView view=new ModelAndView("redirect:/product");
+		System.out.println("########EDIT");
+		Product product=productService.getProduct(productId);
+		productService.updateProduct(product);
+		List<Product> allProducts=productService.listProducts();
+		view.addObject("allProducts", allProducts);
+		view.addObject("command", product);
+		return view;
+	}
+	
+	@RequestMapping("/viewProduct")
+	public ModelAndView viewProduct() {
+		ModelAndView view=new ModelAndView("ViewProduct");
+		return view;
+	}
+	@RequestMapping("/product")
+	public ModelAndView ProductForm() {
+		ModelAndView view=new ModelAndView("ProductForm");
+		view.addObject("command", new Product());
+		List<Product> allProducts=productService.listProducts();
+		view.addObject("allProducts", allProducts);
+		return view;
+	}
+}

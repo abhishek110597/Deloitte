@@ -1,0 +1,47 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Product form</title>
+</head>
+<body>
+<f:form>
+	<form >
+		<h2>Product form</h2>
+		<table cellspacing="10" cellpadding="10" border="0" align="center">
+			<caption>Product Form</caption>
+			<tr>
+				<td>Product ID :</td>
+				<td><f:input path="productId" name="productId" id="productId" placeholder="Enter ID"/></td>
+				<td><span id="errorProductId"></span></td>
+				
+				
+			</tr>
+			<tr>
+				<td>Product Name :</td>
+				<td><f:input path="productName" placeholder="Enter Name" name="productName" id="productName" /></td>
+				<td><span id="errorProductName"></span></td>
+			</tr>
+			<tr>
+				<td>Price :</td>
+				<td><f:input path="price" name="price"
+					id="price" placeholder="Enter Price"/></td>
+				<td><span id="errorPrice"></span></td>
+			</tr>
+			<tr>
+				<td>Quantity :</td>
+				<td><f:input path="qoh" name="qoh" id="qoh" placeholder="Enter Quantity"/></td>
+				<td><span id="errorQoh"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="Save" formaction="saveProduct"/></td>		
+			</tr>
+		</table>
+		<div id=display align="center"></div>
+	</form>
+	</f:form>
+</body>
+</html>
+

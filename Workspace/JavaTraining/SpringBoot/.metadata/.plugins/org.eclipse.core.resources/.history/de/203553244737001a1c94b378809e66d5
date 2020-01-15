@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Here</title>
+<h1 align="center">Login</h1>
+</head>
+<body bgcolor="#68d8d1">
+<div align="center">
+<form action="login">
+<table>
+<tr><td>User ID :</td><td><input type="text" id="userId" name="userId" placeholder="Enter User ID"/></td></tr>
+<tr><td>User ID :</td><td><input type="text" id="userId" name="userId" placeholder="Enter User ID" required/></tr>
+<tr><td colspan="2" align="center"></td></tr>
+</table>
+</form>
+</div>
+</body>
+</html>

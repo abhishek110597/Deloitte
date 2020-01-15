@@ -1,0 +1,49 @@
+package com.pms.deloitte.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.pms.deloitte.dao.ProductDAO;
+import com.pms.deloitte.model.Product;
+import com.pms.deloitte.service.ProductService;
+
+@Controller
+public class ProductController {
+
+	@Autowired
+	ProductService productService;
+	
+	@RequestMapping("/saveProduct")
+	public ModelAndView saveProduct(Product product) {
+		ModelAndView view=new ModelAndView("ProductForm");
+		System.out.println(product);
+		view.addObject("command", new Product());
+		productService.addProduct(product);;
+		return view;
+	}
+	@RequestMapping("/deleteProduct")
+	public ModelAndView deleteProduct(Product product) {
+		ModelAndView view=new ModelAndView("DeleteProduct");
+		productService.deleteProduct(product.getProductId());
+		return view;
+	}
+	@RequestMapping("/updateProduct")
+	public ModelAndView updateProduct(Product product) {
+		ModelAndView view=new ModelAndView("UpdateProduct");
+		productService.updateProduct(product);
+		return view;
+	}
+	@RequestMapping("/viewProduct")
+	public ModelAndView viewProduct() {
+		ModelAndView view=new ModelAndView("ViewProduct");
+		return view;
+	}
+	@RequestMapping("/product")
+	public ModelAndView ProductForm() {
+		ModelAndView view=new ModelAndView("ProductForm");
+		view.addObject("command", new Product());
+		return view;
+	}
+}

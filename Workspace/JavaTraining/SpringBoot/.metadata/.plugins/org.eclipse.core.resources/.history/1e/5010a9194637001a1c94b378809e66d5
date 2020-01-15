@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Portal</title>
+<h1 align="center">Contacts Retrieval Portal</h1>
+<hr>
+</head>
+<body>
+<div align="center">
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Already an account holder?<a href="login.html">Login</a>
+<br/>
+Join the community<a href="signup.html">Sign Up</a>
+</div>
+</body>
+</html>
