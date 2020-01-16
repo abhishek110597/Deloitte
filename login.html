@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login here</title>
+<h1 align="center">Login here</h1>
+<hr>
+<script type="text/javascript">
+	function validate() {
+		var userId=document.getElementById("userId").value;
+		var password=document.getElementById("password").value;
+		
+		var errorUserId=document.getElementById("errorUserId");
+		var errorPassword=document.getElementById("errorPassword");
+		
+		var returnUserId=false;
+		var returnPassword=false;
+		if(userId==0){
+			errorUserId.innerHTML = "<font color='red'>Invalid UserID";
+		}
+		else{
+			errorUserId.innerHTML="";
+			returnUserId=true;	
+		}
+		if(password==0){
+			errorPassword.innerHTML = "<font color='red'>Invalid Password";
+		}
+		else{
+			errorPassword.innerHTML="";
+			returnPassword=true;
+		}
+		if(returnUserId&&returnPassword){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+</script>
+</head>
+<body bgcolor="#BFCFFF">
+<div align="center">
+<form action="index.html" method="post" onsubmit="return validate()">
+<table cellspacing="10" cellpadding="10">
+<tr>
+<td>User ID : </td>
+<td><input type="text" name="userId" id="userId" placeholder="Enter Name"/></td>
+<td><span id="errorUserId"></</span></td>
+</tr>
+<tr>
+<td>Password: </td>
+<td><input type="password" name="password" id="password" placeholder="Enter Password"/></td>
+<td><span id="errorPassword"></</span></td></tr>
+<tr><td></td><td align="center"><input type="submit" value="Log In"/></tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+
+
+
